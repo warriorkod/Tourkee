@@ -1,0 +1,219 @@
+
+<!-- ##### Right Side Cart Area ##### -->
+<div class="usercart-bg-overlay"></div>
+
+<div class="cart-bg-overlay"></div>
+
+<div class="user-side-cart-area">
+
+  <!-- Cart Button -->
+  <div class="cart-button">
+    <a href="#" id="userSideCart"><i class="fa fa-user-o fa-2x"></i></a>
+  </div>
+
+  <div class="cart-content d-flex">
+
+    <!-- Cart Summary -->
+    <div class="cart-amount-summary">
+      <div class="login" id="loginModal">
+        <div class="modal-dialog login animated">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Connectez-vous avec : </h4>
+            </div>
+            <div class="modal-body">
+              <div class="box">
+                <div class="content">
+                  <div class="social">
+                    <a class="circle github" href="/auth/github">
+                      <i class="fa fa-github fa-fw"></i>
+                    </a>
+                    <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                      <i class="fa fa-google-plus fa-fw"></i>
+                    </a>
+                    <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                      <i class="fa fa-facebook fa-fw"></i>
+                    </a>
+                  </div>
+                  <div class="division">
+                    <div class="line l"></div>
+                    <span>or</span>
+                    <div class="line r"></div>
+                  </div>
+                  <div class="error"></div>
+                  <div class="form loginBox p-2">
+                    <form #f1="ngForm" (ngSubmit)="login(f1.value)">
+                      <div class="form-group">
+                        <div class="">
+                          <input id="email0" type="email" class="form-control" name="email0"  placeholder="Email" required ngModel autofocus>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password0" type="password" class="form-control" name="password0" placeholder="Mot de passe" ngModel required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="pl-5">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" name="remember"> Remember Me
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <button class="btn btn-default btn-login" type="submit" >Se connecter</button>
+
+                          <a class="btn btn-link" href="#">
+                            Mot de passe oublié?
+                          </a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="content registerBox" style="display:none;">
+                  <div class="form" >
+                    <form  #f2="ngForm" (ngSubmit)="register(f2.value)" >
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="name" type="text" class="form-control" name="nom" value="" ngModel placeholder="Nom" required autofocus>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="prenom" type="text" class="form-control" name="prenom" value="" ngModel placeholder="Prénom" required autofocus>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="email1" type="email" class="form-control" name="email1" value="" ngModel placeholder="Email" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password1" type="password" class="form-control" name="password1" ngModel  placeholder="Mot de passe" required>
+                        </div>
+                      </div>
+                      rightSideCart
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmer mot de passe" required>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="tel" type="number" class="form-control" name="tel" value="" ngModel placeholder="Tel" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="">
+                          <input id="datenaiss" type="date" class="form-control" name="Date" value="" ngModel placeholder="Date de naissance" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="">
+                          <button class="btn btn-default btn-login" type="submit" >S'inscrire</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="forgot login-footer">
+                            <span>Vous cherchez à
+                                 <a href="javascript: showRegisterForm();">Crer un compte</a>
+                            ?</span>
+              </div>
+              <div class="forgot register-footer" style="display:none">
+                <span>Vous avez déjà un compte?</span>
+                <a href="javascript: showLoginForm();">S'identifier</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ##### Breadcumb Area Start ##### -->
+<div class="breadcumb_area bg-img" style="background-image: url(../../../assets/img/bg-img/undercol.jpg);">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12">
+        <div class="page-title text-center">
+          <h2>Détails</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ##### Breadcumb Area End ##### -->
+<!-- ##### Single Product Details Area Start ##### -->
+<section class="single_product_details_area d-flex align-items-center">
+
+  <!-- Single Product Thumb -->
+  <div class="single_product_thumb clearfix ">
+    <div class="product_thumbnail_slides owl-carousel ">
+      <img *ngFor="let model of model.images;" src="{{adresseServer}}{{model.nom}}" alt="" class="">
+      <!--<img src="img/product-img/product-big-2.jpg" alt="">-->
+      <!--<img src="img/product-img/product-big-3.jpg" alt="">-->
+    </div>
+  </div>
+
+  <!-- Single Product Description -->
+  <div class="single_product_desc clearfix">
+    <span>{{name}}</span>
+    <a href="cart.html">
+      <h2>One Shoulder Glitter Midi Dress</h2>
+    </a>
+    <p class="product-price"><span class="old-price">$65.00</span> $49.00</p>
+    <p class="product-desc">Mauris viverra cursus ante laoreet eleifend. Donec vel fringilla ante. Aenean finibus velit id urna vehicula, nec maximus est sollicitudin.</p>
+
+    <!-- Form -->
+    <form class="cart-form clearfix" method="post">
+      <!-- Select Box -->
+      <div class="select-box d-flex mt-50 mb-30">
+        <select name="select" id="productSize" class="mr-5">
+          <option value="value">Size: XL</option>
+          <option value="value">Size: X</option>
+          <option value="value">Size: M</option>
+          <option value="value">Size: S</option>
+        </select>
+        <select name="select" id="productColor">
+          <option value="value">Color: Black</option>
+          <option value="value">Color: White</option>
+          <option value="value">Color: Red</option>
+          <option value="value">Color: Purple</option>
+        </select>
+      </div>
+      <!-- Cart & Favourite Box -->
+      <div class="cart-fav-box d-flex align-items-center">
+        <!-- Cart -->
+        <button (click)="ajouterPanier()" value="5" class="btn essence-btn">Ajouter au panier</button>
+        <!-- Favourite -->
+        <div class="product-favourite ml-4">
+          <a href="#" class="favme fa fa-heart"></a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- ##### Single Product Details Area End ##### -->

@@ -1,0 +1,811 @@
+    /* ####################################################
+    :: Template Name: Essence - Fashion Ecommerce Template
+    :: Author: Colorlib
+    :: Author URL: https://colorlib.com
+    :: Description: Essence is smart & elegant fashion e-commerce Template. It's suitable for all e-commerce business platform.
+    :: Version: 1.0.0
+    :: Created: April 27, 2018
+    :: Last Updated: May 2, 2018
+    #################################################### */
+
+    /* ---------------------------------------
+    ##### - PLACE YOUR CUSTOM CSS HERE - #####
+    --------------------------------------- */
+    @font-face {
+        font-family: "Lato-Regular";
+        src: url("/fonts/lato/Lato-Regular.ttf"); }
+    @font-face {
+        font-family: "Lato-Black";
+        src: url("/fonts/lato/Lato-Black.ttf"); }
+    @font-face {
+        font-family: "Lato-Bold";
+        src: url("/fonts/lato/Lato-Bold.ttf"); }
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+
+
+    .nice{
+        -webkit-animation-name:pulse;
+        animation-duration: 1s;
+    }
+
+
+    @media screen and (min-width: 1398px) {
+        .welcome_area .texte .header-li{
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            min-width: 50%;
+            width: 50%;
+        }
+        .welcome_area .texte {
+            left: 80%;
+            top: 25%;
+            position: relative;
+            z-index: 1;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 90px;
+            flex: 0 0 90px;
+            display: block;
+            /*text-align: center;*/
+            /*border-left: 1px solid #ebebeb;*/
+            height: 100%;
+            line-height: 60px;
+            color: white;
+            font-size: 20px;
+            width: auto;
+        ;
+        }
+        .welcome_area .texte .top-link{
+            margin-left: 5%;
+            -webkit-animation-name:pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            -moz-animation-name: ;
+            -o-animation-name: blink;
+            animation-delay: 1.5s;
+            width: 475px;
+            background-color: #4A4041;
+            background:rgba(0,0,0,0.2);
+            color: white;
+            border: 1px solid;
+            border-radius: 20%;
+            padding: 1%;
+        }
+        .welcome_area .texte .top-link a  {
+
+            font-size: 3em;
+            letter-spacing: .1em;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            color: white;
+        }
+        .welcome_area .texte a {;
+            font-size: 20px;
+            color: #fff;
+        }
+
+    }
+
+    @media screen and (min-width: 1025px) and  (max-width: 1397px) {
+        .welcome_area .texte .header-li{
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            min-width: 50%;
+            width: 40%;
+        }
+        .welcome_area .texte {
+            left: 65%;
+            top: 30%;
+            position: relative;
+            z-index: 1;
+            /*-webkit-box-flex: 0;*/
+            /*-ms-flex: 0 0 90px;*/
+            /*flex: 0 0 90px;*/
+            display: block;
+            /*text-align: center;*/
+            /*border-left: 1px solid #ebebeb;*/
+            height: 100%;
+            line-height: 50px;
+            color: white;
+            /*font-size: 15px;*/
+            width: auto;
+        }
+        .welcome_area .texte .top-link{
+            margin-left: 10%;
+            -webkit-animation-name:pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            -moz-animation-name: ;
+            -o-animation-name: blink;
+            animation-delay: 1.5s;
+            width: 350px;
+            background-color: #4A4041;
+            background:rgba(0,0,0,0.2);
+            color: white;
+            border: 1px solid;
+            border-radius: 20%;
+            padding: 1%;
+        }
+        .welcome_area .texte .top-link a  {
+
+            font-size: 3em;
+            letter-spacing: .1em;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            color: white;
+        }
+        .welcome_area .texte a {
+            font-size: 20px;
+            color: #fff;
+        }
+
+    }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .welcome_area .texte .header-li{
+            margin-left: 10%;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            min-width: 50%;
+            width: 40%;
+        }
+        .welcome_area .texte {
+            /*left: 50%;*/
+            margin-left: 65%;
+            top: 50%;
+            position: relative;
+            z-index: 1;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 90px;
+            flex: 0 0 90px;
+            display: block;
+            /*text-align: center;*/
+            /*border-left: 1px solid #ebebeb;*/
+            height: 100%;
+            line-height: 40px;
+            color: white;
+            /*font-size: 15px;*/
+            width: auto;
+        }
+        .welcome_area .texte .top-link{
+            margin-left: 5%;
+            -webkit-animation-name:pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            -moz-animation-name: ;
+            -o-animation-name: blink;
+            animation-delay: 1.5s;
+            width: 300px;
+            background-color: #4A4041;
+            background:rgba(0,0,0,0.2);
+            color: white;
+            border: 1px solid;
+            border-radius: 20%;
+            padding: 1%;
+        }
+        .welcome_area .texte .top-link a  {
+
+            font-size: 2.5em;
+            letter-spacing: .1em;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            color: white;
+        }
+        .welcome_area .texte a {
+            font-size: 1.5em;
+            color: #fff;
+        }
+    }
+    @media only screen   and (max-width: 768px) {
+
+        .welcome_area .texte .header-li{
+            margin-left: 20%;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            min-width: 50%;
+            width: 40%;
+        }
+        .welcome_area .texte {
+            /*left: 50%;*/
+            margin-left: 68%;
+            top: 20%;
+            position: relative;
+            z-index: auto;
+            /*-webkit-box-flex: 0;*/
+            /*-ms-flex: 0 0 90px;*/
+            /*flex: 0 0 90px;*/
+            display: block;
+            /*text-align: center;*/
+            /*border-left: 1px solid #ebebeb;*/
+            height: 100%;
+            line-height: 40px;
+            color: white;
+            /*font-size: 15px;*/
+            width: auto;
+        }
+        .welcome_area .texte .top-link{
+            margin-left: 7%;
+            -webkit-animation-name:pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            -moz-animation-name: ;
+            -o-animation-name: blink;
+            animation-delay: 1.5s;
+            width: 220px;
+            background-color: #4A4041;
+            background:rgba(0,0,0,0.2);
+            color: white;
+            border: 1px solid;
+            border-radius: 20%;
+            padding: 1%;
+        }
+        .welcome_area .texte .top-link a  {
+
+            font-size: 2em;
+            letter-spacing: .1em;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            color: white;
+        }
+        .welcome_area .texte a {
+            font-size: 1em;
+            color: #fff;
+        }
+    }
+    @media screen and (min-width: 376px)  and (max-width: 767px) {
+
+        .welcome_area .texte .header-li{
+            margin-left: 40%;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            min-width: 50%;
+            width: 40%;
+        }
+        .welcome_area .texte {
+            /*left: 50%;*/
+            margin-left: 30%;
+            top: 20%;
+            position: relative;
+            z-index: auto;
+            /*-webkit-box-flex: 0;*/
+            /*-ms-flex: 0 0 90px;*/
+            /*flex: 0 0 90px;*/
+            display: block;
+            /*text-align: center;*/
+            /*border-left: 1px solid #ebebeb;*/
+            height: 100%;
+            line-height: 40px;
+            color: white;
+            /*font-size: 15px;*/
+            width: auto;
+        }
+        .welcome_area .texte .top-link{
+            margin-left: 50%;
+            -webkit-animation-name:pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            -moz-animation-name: ;
+            -o-animation-name: blink;
+            animation-delay: 1.5s;
+            width: 130px;
+            background-color: #4A4041;
+            background:rgba(0,0,0,0.2);
+            color: white;
+            border: 1px solid;
+            border-radius: 20%;
+            padding: 1%;
+        }
+        .welcome_area .texte .top-link a  {
+
+            font-size: 15px;
+            letter-spacing: .1em;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            color: white;
+        }
+        .welcome_area .texte a {
+            font-size: 10px;
+            color: #fff;
+        }
+    }
+
+
+    @media  screen and (max-width: 375px) {
+
+        .welcome_area .texte .header-li{
+            margin-left: 30%;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            min-width: 50%;
+            width: 40%;
+        }
+        .welcome_area .texte {
+            /*left: 50%;*/
+            margin-left: 30%;
+            top: 20%;
+            position: relative;
+            z-index: auto;
+            /*-webkit-box-flex: 0;*/
+            /*-ms-flex: 0 0 90px;*/
+            /*flex: 0 0 90px;*/
+            display: block;
+            /*text-align: center;*/
+            /*border-left: 1px solid #ebebeb;*/
+            height: 100%;
+            line-height: 40px;
+            color: white;
+            /*font-size: 15px;*/
+            width: auto;
+        }
+        .welcome_area .texte .top-link{
+            margin-left: 35%;
+            -webkit-animation-name:pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            -moz-animation-name: ;
+            -o-animation-name: blink;
+            animation-delay: 1.5s;
+            width: 150px;
+            background-color: #4A4041;
+            background:rgba(0,0,0,0.2);
+            color: white;
+            border: 1px solid;
+            border-radius: 20%;
+            padding: 1%;
+        }
+        .welcome_area .texte .top-link a  {
+
+            font-size: 15px;
+            letter-spacing: .1em;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            color: white;
+        }
+        .welcome_area .texte a {
+            font-size: 10px;
+            color: #fff;
+        }
+    }
+
+
+
+    .texte-presentation{
+        opacity: .5;
+        text-transform: uppercase;
+        top: 15%;
+        align-items: center;
+        text-align: justify;
+        line-height: 1.8;;
+
+    }
+    .texte-accueil{
+        opacity: .5;
+        text-transform: uppercase;
+        top: 15%;
+        align-items: center;
+        text-align: justify;
+        line-height: 1.5;
+        font-size: 20px;
+
+
+    }
+    .img{
+        background: url("img/bg-img/IMG_2424.JPG") no-repeat center center;
+        background-size: contain;
+        height: 300px;
+        display: flex;
+
+    }
+
+    .hr hr{
+        height: 6px;
+        background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+        border: 0;
+    }
+    .hr-accueil hr{
+        margin-bottom: 5%;
+        margin-right: 25%;
+        margin-left: 25%;
+        /*height: 6px;*/
+        /*background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;*/
+        border: 0;
+        height: 100px;
+        background: #fff url(img/bg-img/hr.png) no-repeat scroll center;
+    }
+
+    .presentation {
+        font-family: "Agency FB";
+        margin: 0;
+        padding: 1%;
+        color: #000;
+        height: auto;
+        display: flex;
+    }
+    .yaram {
+        font-size: 14px;
+        margin: 0;
+        color: #999;
+        background: url("img/bg-img/couverture.jpg") no-repeat;
+        height: 100vh;
+        background-size: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    :focus {
+        outline: none; }
+
+    textarea {
+        resize: none; }
+
+    input, textarea, select, button {
+        /*font-family: "Lato-Regular";*/
+        font-size: 14px; }
+
+    select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+    ;}
+    select option[value=""][disabled] {
+        display: none; }
+
+    p, h1, h2, h3, h4, h5, h6, ul {
+        margin: 0; }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none; }
+
+    a {
+        text-decoration: none; }
+
+    textarea {
+        resize: none; }
+
+    img {
+        max-width: 100%;
+        vertical-align: middle; }
+
+    .wrapper {
+
+        margin-top: 15%;
+        width: 826px;
+        height: 620px;
+        padding: 63px 90px 0;
+        background-color: #ffffff ;
+        opacity: .9;
+
+         }
+
+    .wizard {
+        position: relative;
+    }
+
+    .steps .current-info, .steps .number {
+        display: none; }
+
+    .steps ul {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 35px; }
+    .steps ul li {
+        margin-right: 10.8%;
+        position: relative; }
+    .steps ul li:last-child {
+        margin-right: 0; }
+    .steps ul li .step-arrow {
+        position: absolute;
+        top: 33%;
+        left: 113%;
+        max-width: 57%; }
+    .steps ul li .step-order {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #666;
+        margin-top: 14px; }
+
+    h3 {
+        /*font-family: "Lato-Black";*/
+        font-size: 20px;
+        color: #333;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin-bottom: 29px;
+        font-weight: 900; }
+
+    .form-row {
+        display: flex;
+        margin-bottom: 20px; }
+    .form-row .form-holder {
+        width: 47%;
+        margin-right: 20px; }
+    .form-row .form-holder:last-child {
+        margin-right: 0; }
+    .form-row .form-holder.w-100 {
+        width: 100%;
+        margin-right: 0; }
+    .form-row .form-group {
+        width: 50%;
+        display: flex; }
+    .form-row .form-group .form-holder {
+        margin-right: 21px; }
+    .form-row .form-group .form-holder:last-child {
+        margin-right: 0; }
+
+    .form-holder {
+        position: relative; }
+    .form-holder i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        font-size: 16px; }
+    .form-holder i.zmdi-eye {
+        cursor: pointer; }
+    .form-control {
+        height: 42px;
+        border: 1px solid #e6e6e6;
+        width: 100%;
+        background: none;
+        padding: 0 35px 0 19px;
+        color: #999; }
+    .form-control:focus {
+        border-color: #8eb852; }
+    .form-control::-webkit-input-placeholder {
+        color: #000; }
+    .form-control::-moz-placeholder {
+        color: #000; }
+    .form-control:-ms-input-placeholder {
+        color: #000; }
+    .form-control:-moz-placeholder {
+        color: #000; }
+
+    .actions {
+        margin-top: 30px; }
+    .actions ul {
+        display: flex;
+        justify-content: space-between; }
+    .actions ul.step-4 {
+        justify-content: center; }
+    .actions ul.step-4 li:first-child {
+        display: none; }
+    .actions li a {
+        border: none;
+        display: inline-flex;
+        height: 42px;
+        width: 132px;
+        align-items: center;
+        color: #fff;
+        cursor: pointer;
+        background: #994134;
+        text-transform: uppercase;
+        justify-content: center;
+        letter-spacing: 1px;
+        font-size: 15px;
+        border-radius: 3px; }
+    .actions li a:hover {
+        background: #a1d15e; }
+    .actions li:first-child a {
+        width: 134px; }
+    .actions li:last-child a {
+        width: 234px; }
+
+    table.cart {
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 17px; }
+    table.cart th {
+        /*font-family: "Lato-Bold";*/
+        color: #666;
+        padding: 9px 0;
+        border-bottom: 1px solid #e6e6e6; }
+    table.cart td {
+        padding: 13px 0;
+        border-bottom: 1px solid #e6e6e6; }
+    table.cart tr:last-child td {
+        border: none; }
+    table.cart tr:last-child td {
+        padding-bottom: 0; }
+    table.cart .item-thumb {
+        display: inline-block;
+        border: 1px solid #e6e6e6; }
+    table.cart .product-thumb {
+        width: 17.49%; }
+    table.cart .product-detail {
+        width: 22.45%; }
+    table.cart .product-detail a {
+        /*font-family: "Lato-Bold";*/
+        color: #666;
+        display: block;
+        margin-bottom: 6px; }
+    table.cart .product-detail span {
+        color: #999; }
+    table.cart .product-quantity {
+        width: 16.25%; }
+    table.cart .product-quantity .quantity {
+        display: inline-block;
+        width: 105px;
+        height: 36px;
+        background: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+    table.cart .product-quantity span {
+        cursor: pointer;
+        display: inline-block;
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+    table.cart .product-quantity input {
+        border: none;
+        padding: 0;
+        width: 17px;
+        font-size: 15px;
+        color: #666;
+        background: none;
+        text-align: center; }
+    table.cart .product-quantity input::-webkit-outer-spin-button, table.cart .product-quantity input::-webkit-inner-spin-button {
+        -webkit-appearance: none; }
+    table.cart .total-price {
+        width: 39.78%;
+        text-align: center; }
+    table.cart .total-price span {
+        /*font-family: "Lato-Bold";*/
+        color: #92c752;
+        font-weight: 700; }
+    table.cart .product-remove {
+        width: 4.03%;
+        text-align: right; }
+    table.cart .product-remove a {
+        color: #666; }
+
+    .cart_totals {
+        font-size: 15px;
+        color: #666;
+        width: 66.56%;
+        margin: auto;
+        margin-bottom: 31px; }
+    .cart_totals table {
+        width: 100%; }
+    .cart_totals th, .cart_totals td {
+        padding: 11px 0;
+        vertical-align: top;
+        text-align: left; }
+    .cart_totals th {
+        /*font-family: "Lato-Bold";*/
+        color: #333;
+        text-align: left;
+        width: 65.81%; }
+    .cart_totals th span {
+        color: #999;
+        font-size: 14px; }
+    .cart_totals .order-total th, .cart_totals .order-total td {
+        padding: 12px 0;
+        color: #333;
+        /*font-family: "Lato-Bold"; */}
+
+    .checkbox label {
+        padding-left: 21px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        margin-bottom: 13px; }
+    .checkbox label span {
+        /*font-family: "Lato-Bold"; }*/}
+    .checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer; }
+    .checkbox input:checked ~ .checkmark:after {
+        display: block; }
+    .checkbox .checkmark {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        height: 13px;
+        width: 13px;
+        border-radius: 50%;
+        border: 1px solid #999; }
+    .checkbox .checkmark:after {
+        content: "";
+        top: 2px;
+        left: 2px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #999;
+        position: absolute;
+        display: none; }
+
+    @media (max-width: 991px) {
+        .steps ul li .step-arrow {
+            top: 45%;
+            left: 102%; }
+
+        .cart_totals {
+            width: 74%; } }
+    @media (max-width: 767px) {
+        body {
+            background: none;
+            height: auto;
+            display: block; }
+        #respon{
+            margin-top: 150px;
+        }
+
+        .steps ul li .step-arrow {
+            top: 35%; }
+
+        .wrapper {
+            width: auto;
+            padding: 0;
+            height: auto;
+            margin-top: 300px;
+            margin-left: 4%;
+            margin-bottom: 300px;
+        }
+
+        .wizard {
+            height: 1000px;
+            padding: 40px 20px 20px; }
+
+        .form-row {
+            display: block; }
+        .form-row .form-holder {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 25px; }
+        .form-row .form-group {
+            width: 100%;
+            display: block; }
+
+        .actions ul {
+            flex-direction: column;
+            align-items: flex-end; }
+        .actions ul li {
+            margin-bottom: 20px; }
+
+        .cart_totals {
+            width: 100%; }
+        .cart_totals .shipping th, .cart_totals .shipping td {
+            display: block;
+            text-align: left; }
+        .cart_totals td {
+            text-align: right; }
+        .cart_totals th {
+            width: 80%; }
+
+        table.cart th {
+            display: none; }
+        table.cart td {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: none; }
+        table.cart td:before {
+            content: attr(data-title);
+            font-weight: 700;
+            color: #333; }
+        table.cart .product-thumb, table.cart .product-detail, table.cart .product-quantity, table.cart .total-price, table.cart .product-remove {
+            width: 100%; }
+        table.cart .product-thumb, table.cart .product-remove {
+            justify-content: center; }
+        table.cart tr:first-child td:last-child {
+            padding-bottom: 30px; }
+        table.cart tr:last-child td {
+            padding-bottom: 13px; }
+        table.cart tr:last-child td:first-child {
+            padding-top: 30px;
+            border-top: 1px solid #e6e6e6; } }
+
+    /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,387 @@
+
+<!-- ##### Right Side Cart Area ##### -->
+<div class="usercart-bg-overlay"></div>
+
+<!-- ##### Right Side Cart Area ##### -->
+<div class="cart-bg-overlay"></div>
+
+<div class="user-side-cart-area">
+
+  <!-- Cart Button -->
+  <div class="cart-button">
+    <a href="#" id="userSideCart"><i class="fa fa-user-o fa-2x"></i></a>
+  </div>
+
+  <div class="cart-content d-flex">
+
+    <!-- Cart Summary -->
+    <div class="cart-amount-summary">
+      <div class="login" id="loginModal">
+        <div class="modal-dialog login animated">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="box">
+                <div class="content">
+                  <div class="row social">
+                    <div class="col-2">
+                      <a class="" href="#">
+                        <i class="fa fa-user fa-3x"></i>
+                      </a>
+                    </div>
+                    <div class="col-2">
+                                            <span class="badge" style="font-size: 15px">
+                                                Abdoulaye kane
+                                            </span>
+                    </div>
+                  </div>
+                  <div class="division">
+                    <div class="line l"></div>
+                    <span>?</span>
+                    <div class="line r"></div>
+                    <div class="form loginBox p-2">
+                      <div class="social">
+                        <a (click)="logout()" class="" href="#">
+                          <i class="fa fa-sign-out fa-5x"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="content registerBox" style="display:none;">
+                  <div class="form">
+                    <form role="form" class="form-horizontal" method="POST" action="">
+
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password" type="password" class="form-control" name="password" placeholder="Mot de passe" required>
+
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmer mot de passe" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <button class="btn btn-default btn-login" type="submit" >Modifier</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="forgot login-footer">
+                            <span>Vous cherchez à
+                                 <a href="javascript: showRegisterForm();">Changer de mot de passee</a>
+                            </span>
+              </div>
+              <div class="forgot register-footer" style="display:none">
+                <span>Vous voulez déjà nous quitter??</span>
+                <a href="javascript: showLoginForm();">Se deconnecterr</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="right-side-cart-area">
+
+  <!-- Cart Button -->
+  <div class="cart-button">
+    <a href="#" id="rightSideCart"><i class="fa fa-cart-arrow-down fa-2x"></i> <span>3</span></a>
+  </div>
+
+  <div class="cart-content d-flex">
+
+    <!-- Cart List Area -->
+    <div class="cart-list">
+      <!-- Single Cart Item -->
+      <div class="single-cart-item">
+        <a href="#" class="product-image">
+          <img src="../../../assets/img/product-img/product-1.jpg" class="cart-thumb" alt="">
+          <!-- Cart Item Desc -->
+          <div class="cart-item-desc">
+            <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+            <span class="badge">Mango</span>
+            <h6>Button Through Strap Mini Dress</h6>
+            <p class="size">Size: S</p>
+            <p class="color">Color: Red</p>
+            <p class="price">$45.00</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Single Cart Item -->
+      <div class="single-cart-item">
+        <a href="#" class="product-image">
+          <img src="../../../assets/img/product-img/product-2.jpg" class="cart-thumb" alt="">
+          <!-- Cart Item Desc -->
+          <div class="cart-item-desc">
+            <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+            <span class="badge">Mango</span>
+            <h6>Button Through Strap Mini Dress</h6>
+            <p class="size">Size: S</p>
+            <p class="color">Color: Red</p>
+            <p class="price">$45.00</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Single Cart Item -->
+      <div class="single-cart-item">
+        <a href="#" class="product-image">
+          <img src="../../../assets/img/product-img/product-3.jpg" class="cart-thumb" alt="">
+          <!-- Cart Item Desc -->
+          <div class="cart-item-desc">
+            <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+            <span class="badge">Mango</span>
+            <h6>Button Through Strap Mini Dress</h6>
+            <p class="size">Size: S</p>
+            <p class="color">Color: Red</p>
+            <p class="price">$45.00</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="cart-amount-summary">
+
+      <h2>Summary</h2>
+      <ul class="summary-table">
+        <li><span>subtotal:</span> <span>$274.00</span></li>
+        <li><span>delivery:</span> <span>Free</span></li>
+        <li><span>discount:</span> <span>-15%</span></li>
+        <li><span>total:</span> <span>$232.00</span></li>
+      </ul>
+      <div class="checkout-btn mt-100">
+        <a href="checkout.html" class="btn essence-btn">Voir </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ##### Right Side Cart End ##### -->
+
+<!-- ##### Welcome Area Start ##### -->
+<div class="row">
+  <section class= "welcome_area col-sm-6 bg-img backgroud-overlay" style="background-image: url(assets/img/bg-img/couverture3.jpg)">
+  </section>
+  <section class="welcome_area col-sm-6 bg-img backgroud-overlay" style="background-image: url(assets/img/bg-img/couverture.jpg);" >
+    <div class="container h-100" >
+      <div class="row h-100 align-items-center" style="padding-top: 30%">
+        <div class="col-12">
+          <div class="hero-content ">
+            <a href="#" routerLink="gallery" class="btn essence-btn" style="background-color: #994134;color: #ffffff">Voir la nouvelle collection </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- ##### Welcome Area End ##### -->
+
+<!-- ##### Top Catagory Area Start ##### -->
+<div class="top_catagory_area section-padding-80 clearfix">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Single Catagory -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(assets/img/bg-img/bg-2.jpg);">
+          <div class="catagory-content">
+            <a routerLink="shabiller" href="#">S'habiller</a>
+          </div>
+        </div>
+      </div>
+      <!-- Single Catagory -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(assets/img/bg-img/bg-3.jpg);">
+          <div class="catagory-content">
+            <a routerLink="gallery" href="#">Collections</a>
+          </div>
+        </div>
+      </div>
+      <!-- Single Catagory -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img" style="background-image: url(assets/img/bg-img/bg-4.jpg);">
+          <div class="catagory-content">
+            <a href="#">Accessories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ##### Top Catagory Area End ##### -->
+
+<!-- ##### CTA Area Start ##### -->
+
+<!-- ##### CTA Area End ##### -->
+
+<!-- ##### New Arrivals Area Start ##### -->
+<!--<section class="new_arrivals_area section-padding-80 clearfix">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-12">-->
+        <!--<div class="section-heading text-center">-->
+          <!--<h2>Prêt-à-porter</h2>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-12">-->
+        <!--<div class="popular-products-slides owl-carousel">-->
+
+          <!--&lt;!&ndash; Single Product &ndash;&gt;-->
+          <!--<div class="single-product-wrapper">-->
+            <!--&lt;!&ndash; Product Image &ndash;&gt;-->
+            <!--<div class="product-img">-->
+              <!--<img src="../../../assets/img/product-img/1.jpg" alt="">-->
+              <!--&lt;!&ndash; Hover Thumb &ndash;&gt;-->
+              <!--<img class="hover-img" src="../../../assets/img/product-img/2.jpg" alt="">-->
+              <!--&lt;!&ndash; Favourite &ndash;&gt;-->
+              <!--<div class="product-favourite">-->
+                <!--<a href="#" class="favme fa fa-heart"></a>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; Product Description &ndash;&gt;-->
+            <!--<div class="product-description">-->
+              <!--<span>topshop</span>-->
+              <!--<a href="single-product-details.html">-->
+                <!--<h6>Knot Front Mini Dress</h6>-->
+              <!--</a>-->
+              <!--<p class="product-price">$80.00</p>-->
+
+              <!--&lt;!&ndash; Hover Content &ndash;&gt;-->
+              <!--<div class="hover-content">-->
+                <!--&lt;!&ndash; Add to Cart &ndash;&gt;-->
+                <!--<div class="add-to-cart-btn">-->
+                  <!--<a href="#" class="btn essence-btn">Add to Cart</a>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <!--&lt;!&ndash; Single Product &ndash;&gt;-->
+          <!--<div class="single-product-wrapper">-->
+            <!--&lt;!&ndash; Product Image &ndash;&gt;-->
+            <!--<div class="product-img">-->
+              <!--<img src="../../../assets/img/product-img/2.jpg" alt="">-->
+              <!--&lt;!&ndash; Hover Thumb &ndash;&gt;-->
+              <!--<img class="hover-img" src="../../../assets/img/product-img/5.jpg" alt="">-->
+              <!--&lt;!&ndash; Favourite &ndash;&gt;-->
+              <!--<div class="product-favourite">-->
+                <!--<a href="#" class="favme fa fa-heart"></a>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; Product Description &ndash;&gt;-->
+            <!--<div class="product-description">-->
+              <!--<span>topshop</span>-->
+              <!--<a href="single-product-details.html">-->
+                <!--<h6>Poplin Displaced Wrap Dress</h6>-->
+              <!--</a>-->
+              <!--<p class="product-price">$80.00</p>-->
+
+              <!--&lt;!&ndash; Hover Content &ndash;&gt;-->
+              <!--<div class="hover-content">-->
+                <!--&lt;!&ndash; Add to Cart &ndash;&gt;-->
+                <!--<div class="add-to-cart-btn">-->
+                  <!--<a href="#" class="btn essence-btn">Add to Cart</a>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <!--&lt;!&ndash; Single Product &ndash;&gt;-->
+          <!--<div class="single-product-wrapper">-->
+            <!--&lt;!&ndash; Product Image &ndash;&gt;-->
+            <!--<div class="product-img">-->
+              <!--<img src="../../../assets/img/product-img/5.jpg" alt="">-->
+              <!--&lt;!&ndash; Hover Thumb &ndash;&gt;-->
+              <!--<img class="hover-img" src="../../../assets/img/product-img/6.jpg" alt="">-->
+
+              <!--&lt;!&ndash; Product Badge &ndash;&gt;-->
+              <!--<div class="product-badge offer-badge">-->
+                <!--<span>-30%</span>-->
+              <!--</div>-->
+
+              <!--&lt;!&ndash; Favourite &ndash;&gt;-->
+              <!--<div class="product-favourite">-->
+                <!--<a href="#" class="favme fa fa-heart"></a>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; Product Description &ndash;&gt;-->
+            <!--<div class="product-description">-->
+              <!--<span>mango</span>-->
+              <!--<a href="single-product-details.html">-->
+                <!--<h6>PETITE Crepe Wrap Mini Dress</h6>-->
+              <!--</a>-->
+              <!--<p class="product-price"><span class="old-price">$75.00</span> $55.00</p>-->
+
+              <!--&lt;!&ndash; Hover Content &ndash;&gt;-->
+              <!--<div class="hover-content">-->
+                <!--&lt;!&ndash; Add to Cart &ndash;&gt;-->
+                <!--<div class="add-to-cart-btn">-->
+                  <!--<a href="#" class="btn essence-btn">Add to Cart</a>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <!--&lt;!&ndash; Single Product &ndash;&gt;-->
+          <!--<div class="single-product-wrapper">-->
+            <!--&lt;!&ndash; Product Image &ndash;&gt;-->
+            <!--<div class="product-img">-->
+              <!--<img src="../../../assets/img/product-img/6.jpg" alt="">-->
+              <!--&lt;!&ndash; Hover Thumb &ndash;&gt;-->
+              <!--<img class="hover-img" src="../../../assets/img/product-img/7.jpg" alt="">-->
+
+              <!--&lt;!&ndash; Product Badge &ndash;&gt;-->
+              <!--<div class="product-badge new-badge">-->
+                <!--<span>New</span>-->
+              <!--</div>-->
+
+              <!--&lt;!&ndash; Favourite &ndash;&gt;-->
+              <!--<div class="product-favourite">-->
+                <!--<a href="#" class="favme fa fa-heart"></a>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; Product Description &ndash;&gt;-->
+            <!--<div class="product-description">-->
+              <!--<span>mango</span>-->
+              <!--<a href="single-product-details.html">-->
+                <!--<h6>PETITE Belted Jumper Dress</h6>-->
+              <!--</a>-->
+              <!--<p class="product-price">$80.00</p>-->
+
+              <!--&lt;!&ndash; Hover Content &ndash;&gt;-->
+              <!--<div class="hover-content">-->
+                <!--&lt;!&ndash; Add to Cart &ndash;&gt;-->
+                <!--<div class="add-to-cart-btn">-->
+                  <!--<a href="#" class="btn essence-btn">Add to Cart</a>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</section>-->
+<!-- ##### New Arrivals Area End ##### -->
+
+

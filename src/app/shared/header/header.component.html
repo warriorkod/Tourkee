@@ -1,0 +1,415 @@
+<header class="header_area classy-sticky">
+  <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+    <!-- Classy Menu -->
+    <nav class="classy-navbar" id="essenceNav">
+      <!-- Logo -->
+      <a onclick="location.reload()"  class="nav-brand" routerLink="auth" href="#"><img src="../../../assets/img/core-img/Logo-TOORKEE-NOIR.png" alt="" style="height: 60px"></a>
+      <!-- Navbar Toggler -->
+      <div class="classy-navbar-toggler">
+        <span class="navbarToggler"><span></span><span></span><span></span></span>
+      </div>
+      <!-- Menu -->
+      <div class="classy-menu">
+        <!-- close btn -->
+        <div class="classycloseIcon">
+          <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+        </div>
+        <!-- Nav Start -->
+        <div class="classynav">
+          <ul>
+            <li><a *ngIf="show" href="#">Showroom</a>
+              <div class="megamenu">
+                <ul *ngFor="let flux of categorie;" class="single-mega cn-col-4">
+                  <li  class="card-header" style="height: 50px;margin-bottom: 4%">Collection {{flux.nom}}</li>
+                  <!--<li class="card-header" style="height: 35px;;margin-bottom: 2%">Moderne</li>-->
+                  <li  *ngFor="let fl of flux.collections"><a onclick="location.reload()" routerLink="/shop/{{fl.nom}}"  href="#">{{fl.nom}}</a></li>
+                  <!--<li><a routerLink="shop" href="#">Toorkee</a></li>-->
+                  <!--<li><a routerLink="shop" href="#">Faux Toorkee</a></li>-->
+                  <!--<li class="card-header" style="height: 35px;;margin-bottom: 2%">Traditionnel</li>-->
+                  <!--<li><a routerLink="shop" href="#">Grand Boubou</a></li>-->
+                  <!--<li><a routerLink="shop" href="#">Simple</a></li>-->
+                  <!--<li><a routerLink="shop" href="#">Toorkee Tradi</a></li>-->
+                </ul>
+                <!--<ul class="single-mega cn-col-4">-->
+                  <!--<li class="card-header" style="height: 50px;margin-bottom: 4%">Collection Femme</li>-->
+                  <!--<li class="card-header" style="height: 35px;;margin-bottom: 2%">Moderne</li>-->
+                  <!--<li><a routerLink="shop" href="#">Robes Vestes</a></li>-->
+                  <!--<li><a routerLink="shop" href="#">Toorkee</a></li>-->
+                  <!--<li><a routerLink="shop" href="#">Faux Toorkee</a></li>-->
+                  <!--<li  class="card-header" style="height: 35px;;margin-bottom: 2%">Traditionnel</li>-->
+                  <!--<li><a routerLink="shop" href="#">Robes</a></li>-->
+                  <!--<li><a routerLink="shop" href="#">Taille Maam</a></li>-->
+                  <!--<li><a routerLink="shop" href="#">Taille Basse</a></li>-->
+                <!--</ul>-->
+                <!--<ul class="single-mega cn-col-4">-->
+                  <!--<li class="card-header" style="height: 50px;margin-bottom: 4%">Collection Enfant</li>-->
+                  <!--<li><a routerLink="shop" href="#">Manches Vestes</a></li>-->
+                  <!--<li><a routerLink="shop" href="#">Toorkee</a></li>-->
+                  <!--<li><a routerLink="shop" href="#">Faux Toorkee</a></li>-->
+
+                <!--</ul>-->
+                <div class="single-mega cn-col-4">
+                  <img src="../../../assets/img/core-img/Logo-TOORKEE-NOIR.png" alt="">
+                </div>
+              </div>
+            </li>
+            <li><a *ngIf="show" onclick="location.reload()" routerLink="historique" href="#">Historique</a></li>
+            <li><a onclick="location.reload()" routerLink="contact" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Nav End -->
+      </div>
+    </nav>
+
+    <!-- Header Meta Data -->
+    <div class="header-meta d-flex clearfix justify-content-end">
+      <!-- Search Area -->
+      <!--<div class="search-area">-->
+        <!--<form action="#" method="post">-->
+          <!--<input type="search" name="search" id="headerSearch" placeholder="Rechercher">-->
+          <!--<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>-->
+        <!--</form>-->
+      <!--</div>-->
+      <!-- Favourite Area -->
+      <!--<div class="favourite-area">-->
+        <!--<a href="#"><i class="fa fa-comment-o fa-2x"></i></a>-->
+      <!--</div>-->
+      <!-- User Login Info -->
+      <!--<div class="user-login-info">-->
+        <!--<a href="#"><i class="fa fa-bell-o fa-2x"></i></a>-->
+      <!--</div>-->
+      <!-- Cart Area -->
+      <div *ngIf="show" class="cart-area">
+        <a href="#" id="essenceCartBtn"><i class="fa fa-cart-arrow-down fa-2x"></i> </a>
+      </div>
+      <!-- Favourite Area -->
+      <div *ngIf="show" class="cart-area">
+        <a href="#" id="userCartBtn"><i class="fa fa-user-o fa-2x"></i></a>
+      </div>
+      <div *ngIf="!show" class="cart-area">
+        <a href="#" id="userCartBtn3"><i class="fa fa-user-o fa-2x"></i></a>
+      </div>
+
+
+    </div>
+
+  </div>
+</header>
+
+<div  class="right-side-cart-area">
+
+  <!-- Cart Button -->
+  <div class="cart-button">
+    <a href="#" id="rightSideCart"><i class="fa fa-cart-arrow-down fa-2x"></i> <span>3</span></a>
+  </div>
+
+  <div class="cart-content d-flex">
+
+    <!-- Cart List Area -->
+    <div class="cart-list">
+      <!-- Single Cart Item -->
+      <div *ngFor="let model of panier" class="single-cart-item">
+        <a href="#" class="product-image">
+          <img src="{{adresseServer}}{{model.model.images[0].nom}}" class="cart-thumb" alt="">
+          <!-- Cart Item Desc -->
+          <div class="cart-item-desc">
+            <span class="product-remove"><a  href="javascript:void(0)" (click)="deleteItem(model)"><i class="fa fa-close fa-3x" style="color: #FFFFFF;" aria-hidden="true"></i></a></span>
+            <span style="margin-top: 50%"                    class="badge">{{model.model.nom}}</span>
+            <h6>Button Through Strap Mini Dress</h6>
+            <!--<p class="size">Size: S</p>-->
+            <!--<p class="color">Color: Red</p>-->
+            <!--<p class="price">$45.00</p>-->
+          </div>
+        </a>
+      </div>
+
+      <!-- Single Cart Item -->
+      <!--<div class="single-cart-item">-->
+      <!--<a href="#" class="product-image">-->
+      <!--<img src="../../../assets/img/product-img/product-2.jpg" class="cart-thumb" alt="">-->
+      <!--&lt;!&ndash; Cart Item Desc &ndash;&gt;-->
+      <!--<div class="cart-item-desc">-->
+      <!--<span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>-->
+      <!--<span class="badge">Mango</span>-->
+      <!--<h6>Button Through Strap Mini Dress</h6>-->
+      <!--<p class="size">Size: S</p>-->
+      <!--<p class="color">Color: Red</p>-->
+      <!--<p class="price">$45.00</p>-->
+      <!--</div>-->
+      <!--</a>-->
+      <!--</div>-->
+
+      <!-- Single Cart Item -->
+      <!--<div class="single-cart-item">-->
+      <!--<a href="#" class="product-image">-->
+      <!--<img src="../../../assets/img/product-img/product-3.jpg" class="cart-thumb" alt="">-->
+      <!--&lt;!&ndash; Cart Item Desc &ndash;&gt;-->
+      <!--<div class="cart-item-desc">-->
+      <!--<span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>-->
+      <!--<span class="badge">Mango</span>-->
+      <!--<h6>Button Through Strap Mini Dress</h6>-->
+      <!--<p class="size">Size: S</p>-->
+      <!--<p class="color">Color: Red</p>-->
+      <!--<p class="price">$45.00</p>-->
+      <!--</div>-->
+      <!--</a>-->
+      <!--</div>-->
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="cart-amount-summary">
+
+    <h1>Votre commande : </h1>
+    <ul class="summary-table mt-5">
+      <li *ngFor="let model of panier"><span>{{model.model.nom}} :</span> <span><input [(ngModel)]="model.quantite" (change)="changeInput(model)" type="number"  class="" ></span></li>
+      <!--<li><span>discount:</span> <span>-15%</span></li>-->
+      <!--<li><span>total:</span> <span>$232.00</span></li>-->
+      <div class="checkout-btn mt-100">
+        <a href="#" (click)="validate()" class="btn essence-btn">Valider</a>
+      </div>
+
+    </ul>
+
+  </div>
+  </div>
+
+</div>
+<!-- ##### Right Side Cart End ##### -->
+
+<div *ngIf="show"  class="user-side-cart-area">
+
+  <!-- Cart Button -->
+  <div class="cart-button">
+    <a href="#" id="userSideCart"><i class="fa fa-user-o fa-2x"></i></a>
+  </div>
+
+  <div class="cart-content d-flex">
+
+    <!-- Cart Summary -->
+    <div class="cart-amount-summary">
+      <div class="login" id="loginModal">
+        <div class="modal-dialog login animated">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="box">
+                <div class="content">
+                  <div class="row social">
+                    <div class="col-2">
+                      <a class="" href="#">
+                        <i class="fa fa-user fa-3x"></i>
+                      </a>
+                    </div>
+                    <div class="col-2">
+                                            <span class="badge" style="font-size: 15px">
+                                                Abdoulaye kane
+                                            </span>
+                    </div>
+                  </div>
+                  <div class="division">
+                    <div class="line l"></div>
+                    <span>?</span>
+                    <div class="line r"></div>
+                    <div class="form loginBox p-2">
+                      <div class="social">
+                        <button class="" (click)="logout()" href="#">
+                          <i class="fa fa-sign-out fa-5x"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="content registerBox" style="display:none;">
+                  <div class="form">
+                    <form onSubmit="return validation(this)" role="form" class="form-horizontal" method="POST">
+
+
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password" type="password" class="form-control" name="password" placeholder="Mot de passe" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmer mot de passe" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <button class="btn btn-default btn-login" type="submit" >Modifier</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="forgot login-footer">
+                            <span>Vous cherchez à
+                                 <a href="javascript: showRegisterForm();">Changer de mot de passee</a>
+                            ?</span>
+              </div>
+              <div class="forgot register-footer" style="display:none">
+                <span>Vous voulez déjà nous quitter??</span>
+                <a href="javascript: showLoginForm();">Se deconnecterr</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="!show" class="user-side-cart-area">
+
+  <!-- Cart Button -->
+  <div class="cart-button">
+    <a href="#" id="userSideCart"><i class="fa fa-user-o fa-2x"></i></a>
+  </div>
+
+  <div class="cart-content d-flex">
+
+    <!-- Cart Summary -->
+    <div class="cart-amount-summary">
+      <div class="login" id="loginModal">
+        <div class="modal-dialog login animated">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Connectez-vous avec : </h4>
+            </div>
+            <div class="modal-body">
+              <div class="box">
+                <div class="content">
+                  <div class="social">
+                    <a class="circle github" href="/auth/github">
+                      <i class="fa fa-github fa-fw"></i>
+                    </a>
+                    <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                      <i class="fa fa-google-plus fa-fw"></i>
+                    </a>
+                    <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                      <i class="fa fa-facebook fa-fw"></i>
+                    </a>
+                  </div>
+                  <div class="division">
+                    <div class="line l"></div>
+                    <span>or</span>
+                    <div class="line r"></div>
+                  </div>
+                  <div class="error"></div>
+                  <div class="form loginBox p-2">
+                    <form #f1="ngForm" (ngSubmit)="login(f1.value)">
+                      <div class="form-group">
+                        <div class="">
+                          <input id="email0" type="email" class="form-control" name="email0"  placeholder="Email" required ngModel autofocus>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password0" type="password" class="form-control" name="password0" placeholder="Mot de passe" ngModel required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="pl-5">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" name="remember"> Remember Me
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <button class="btn btn-default btn-login" type="submit" >Se connecter</button>
+
+                          <a class="btn btn-link" href="#">
+                            Mot de passe oublié?
+                          </a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="content registerBox" style="display:none;">
+                  <div class="form" >
+                    <form  #f2="ngForm" (ngSubmit)="register(f2.value)" >
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="name" type="text" class="form-control" name="nom" value="" ngModel placeholder="Nom" required autofocus>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="prenom" type="text" class="form-control" name="prenom" value="" ngModel placeholder="Prénom" required autofocus>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="email1" type="email" class="form-control" name="email1" value="" ngModel placeholder="Email" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password1" type="password" class="form-control" name="password1" ngModel  placeholder="Mot de passe" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmer mot de passe" required>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="tel" type="number" class="form-control" name="tel" value="" ngModel placeholder="Tel" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="">
+                          <input id="datenaiss" type="date" class="form-control" name="Date" value="" ngModel placeholder="Date de naissance" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="">
+                          <button class="btn btn-default btn-login" type="submit" >S'inscrire</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="forgot login-footer">
+                            <span>Vous cherchez à
+                                 <a href="javascript: showRegisterForm();">Crer un compte</a>
+                            ?</span>
+              </div>
+              <div class="forgot register-footer" style="display:none">
+                <span>Vous avez déjà un compte?</span>
+                <a href="javascript: showLoginForm();">S'identifier</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

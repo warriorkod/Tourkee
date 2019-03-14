@@ -1,0 +1,440 @@
+<!-- ##### Right Side Cart Area ##### -->
+<div class="usercart-bg-overlay"></div>
+
+<!-- ##### Right Side Cart Area ##### -->
+<div class="cart-bg-overlay"></div>
+
+<div class="user-side-cart-area">
+
+  <!-- Cart Button -->
+  <div class="cart-button">
+    <a href="#" id="userSideCart"><i class="fa fa-user-o fa-2x"></i></a>
+  </div>
+
+  <div class="cart-content d-flex">
+
+    <!-- Cart Summary -->
+    <div class="cart-amount-summary">
+      <div class="login" id="loginModal">
+        <div class="modal-dialog login animated">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Connectez-vous avec : </h4>
+            </div>
+            <div class="modal-body">
+              <div class="box">
+                <div class="content">
+                  <div class="social">
+                    <a class="circle github" href="/auth/github">
+                      <i class="fa fa-github fa-fw"></i>
+                    </a>
+                    <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                      <i class="fa fa-google-plus fa-fw"></i>
+                    </a>
+                    <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                      <i class="fa fa-facebook fa-fw"></i>
+                    </a>
+                  </div>
+                  <div class="division">
+                    <div class="line l"></div>
+                    <span>or</span>
+                    <div class="line r"></div>
+                  </div>
+                  <div class="error"></div>
+                  <div class="form loginBox p-2">
+                    <form #f1="ngForm" (ngSubmit)="login(f1.value)">
+                      <div class="form-group">
+                        <div class="">
+                          <input id="email0" type="email" class="form-control" name="email0"  placeholder="Email" required ngModel autofocus>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password0" type="password" class="form-control" name="password0" placeholder="Mot de passe" ngModel required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="pl-5">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" name="remember"> Remember Me
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <button class="btn btn-default btn-login" type="submit" >Se connecter</button>
+
+                          <a class="btn btn-link" href="#">
+                            Mot de passe oublié?
+                          </a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="content registerBox" style="display:none;">
+                  <div class="form" >
+                    <form  #f2="ngForm" (ngSubmit)="register(f2.value)" >
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="name" type="text" class="form-control" name="nom" value="" ngModel placeholder="Nom" required autofocus>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="prenom" type="text" class="form-control" name="prenom" value="" ngModel placeholder="Prénom" required autofocus>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="email1" type="email" class="form-control" name="email1" value="" ngModel placeholder="Email" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password1" type="password" class="form-control" name="password1" ngModel  placeholder="Mot de passe" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmer mot de passe" required>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <div class="">
+                          <input id="tel" type="number" class="form-control" name="tel" value="" ngModel placeholder="Tel" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="">
+                          <input id="datenaiss" type="date" class="form-control" name="Date" value="" ngModel placeholder="Date de naissance" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="">
+                          <button class="btn btn-default btn-login" type="submit" >S'inscrire</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="forgot login-footer">
+                            <span>Vous cherchez à
+                                 <a href="javascript: showRegisterForm();">Crer un compte</a>
+                            ?</span>
+              </div>
+              <div class="forgot register-footer" style="display:none">
+                <span>Vous avez déjà un compte?</span>
+                <a href="javascript: showLoginForm();">S'identifier</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div class="user-side-cart-area">-->
+
+  <!--&lt;!&ndash; Cart Button &ndash;&gt;-->
+  <!--<div class="cart-button">-->
+    <!--<a href="#" id="userSideCart"><i class="fa fa-user-o fa-2x"></i></a>-->
+  <!--</div>-->
+
+  <!--<div class="cart-content d-flex">-->
+
+    <!--&lt;!&ndash; Cart Summary &ndash;&gt;-->
+    <!--<div class="cart-amount-summary">-->
+      <!--<div class="login" id="loginModal">-->
+        <!--<div class="modal-dialog login animated">-->
+          <!--<div class="modal-content">-->
+            <!--<div class="modal-body">-->
+              <!--<div class="box">-->
+                <!--<div class="content">-->
+                  <!--<div class="row social">-->
+                    <!--<div class="col-2">-->
+                      <!--<a class="" href="#">-->
+                        <!--<i class="fa fa-user fa-3x"></i>-->
+                      <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="col-2">-->
+                                            <!--<span class="badge" style="font-size: 15px">-->
+                                                <!--Abdoulaye kane-->
+                                            <!--</span>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="division">-->
+                    <!--<div class="line l"></div>-->
+                    <!--<span>?</span>-->
+                    <!--<div class="line r"></div>-->
+                    <!--<div class="form loginBox p-2">-->
+                      <!--<div class="social">-->
+                        <!--<a class="" href="#">-->
+                          <!--<i class="fa fa-sign-out fa-5x"></i>-->
+                        <!--</a>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="box">-->
+                <!--<div class="content registerBox" style="display:none;">-->
+                  <!--<div class="form">-->
+                    <!--<form onSubmit="return validation(this)" role="form" class="form-horizontal" method="POST">-->
+                      <!--<div class="form-group">-->
+                        <!--<div class="">-->
+                          <!--<input id="password" type="password" class="form-control" name="password" placeholder="Mot de passe" required>-->
+                        <!--</div>-->
+                      <!--</div>-->
+
+                      <!--<div class="form-group">-->
+                        <!--<div class="">-->
+                          <!--<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmer mot de passe" required>-->
+                        <!--</div>-->
+                      <!--</div>-->
+
+                      <!--<div class="form-group">-->
+                        <!--<div class="">-->
+                          <!--<button class="btn btn-default btn-login" type="submit" >Modifier</button>-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</form>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+              <!--<div class="forgot login-footer">-->
+                            <!--<span>Vous cherchez à-->
+                                 <!--<a href="javascript: showRegisterForm();">Changer de mot de passee</a>-->
+                            <!--?</span>-->
+              <!--</div>-->
+              <!--<div class="forgot register-footer" style="display:none">-->
+                <!--<span>Vous voulez déjà nous quitter??</span>-->
+                <!--<a href="javascript: showLoginForm();">Se deconnecterr</a>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+<!--</div>-->
+
+
+<!-- ##### Breadcumb Area Start ##### -->
+<div class="breadcumb_area bg-img" style="background-image: url(../../../assets/img/bg-img/undercol.jpg);">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12">
+        <div class="page-title text-center">
+          <h2>S'habiller Toorkee</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ##### Breadcumb Area End ##### -->
+
+<!-- ##### Shop Grid Area Start ##### -->
+<section id="respon" class="shop_grid_area">
+  <div class="container">
+    <div class="row yaram">
+      <div class="col-12 col-md-8 col-lg-9 ">
+        <div class="wrapper" >
+          <form action="" id="wizard">
+            <!-- SECTION 1 -->
+            <h4></h4>
+            <section>
+              <h3>Informations générales</h3>
+              <div class="form-row">
+                <div class="form-holder">
+                  <i class="zmdi zmdi-account"></i>
+                  <input type="text" class="form-control" placeholder="Prénom">
+                </div>
+                <div class="form-holder">
+                  <i class="zmdi zmdi-account"></i>
+                  <input type="text" class="form-control" placeholder="Nom">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <select  style="width: 100px" class="form-control" name="age" >
+                    <option disabled value="">Age</option>
+                    <option value="">Moind de 18and</option>
+                    <option value="">18ans à 35ans</option>
+                    <option value="">plus de 35ans</option>
+                  </select>
+                </div>
+                <div class="form-holder ">
+                  <select  id="" class="form-control-" name="sexe">
+                    <option disabled value="">Sexe</option>
+                    <option value="">Homme</option>
+                    <option value="">Homme</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <i class="zmdi zmdi-view-agenda"></i>
+                  <input type="text" class="form-control" placeholder="Phone Number">
+                </div>
+                <div class="form-holder">
+                  <select  class="form-control" name="sexe">
+                    <option disabled value="">Secteur d'activité</option>
+                    <option value="">Education</option>
+                    <option value="">Santé</option>
+                    <option value="">Autre</option>
+                  </select>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 2 -->
+            <h4></h4>
+            <section>
+              <h3>Paramètres du compte</h3>
+              <div class="form-row">
+                <div class="form-holder w-100">
+                  <input type="email" class="form-control" placeholder="Email">
+                  <i class="zmdi zmdi-email"></i>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder w-100">
+                  <input type="password" class="form-control" placeholder="Mot de passe">
+                  <i class="zmdi zmdi-lock-open"></i>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder w-100">
+                  <input type="password" class="form-control" placeholder="Confirmer Mot de passe">
+                  <i class="zmdi zmdi-lock-open"></i>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 3 -->
+            <h4></h4>
+            <section>
+              <h3>Description du client</h3>
+              <div class="form-row">
+                <div class="form-holder">
+                  <i class="zmdi zmdi-view-agenda"></i>
+                  <input type="number" class="form-control" placeholder="Taille">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <select  id="" class="form-control" name="sexe">
+                    <option disabled value="">Corpulence</option>
+                    <option value="">Education</option>
+                    <option value="">Santé</option>
+                    <option value="">Autre</option>
+                  </select>
+                </div>
+                <div class="form-holder">
+                  <select  id="" class="form-control" name="teint">
+                    <option disabled value="">Teint</option>
+                    <option value="">Noir</option>
+                    <option value="">Maron</option>
+                    <option value="">Clair</option>
+                  </select>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 4 -->
+            <h4></h4>
+            <section>
+              <h3>Préférences de la tenue</h3>
+              <div class="form-row">
+                <div class="form-holder">
+                  <select  id="" class="form-control" name="sexe">
+                    <option disabled value="">Type de tissu</option>
+                    <option value="">Soie</option>
+                    <option value="">Supercent</option>
+                    <option value="">Super130</option>
+                    <option value="">Super150</option>
+                    <option value="">Viscoze</option>
+                    <option value="">Lain</option>
+                    <option value="">Laine</option>
+                    <option value="">Vichy</option>
+                    <option value="">Flanelle</option>
+                  </select>
+                </div>
+                <div class="form-holder">
+                  <select  id="" class="form-control" name="teint">
+                    <option disabled value="">Col</option>
+                    <option value="">Col Mao</option>
+                    <option value="">Col V</option>
+                    <option value="">Col Rond</option>
+                    <option value="">Double Col Mao</option>
+                    <option value="">Sans Chemise</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <select  id="" class="form-control" name="sexe">
+                    <option disabled value="">Bas pantalon</option>
+                    <option value="">Bas Slim</option>
+                    <option value="">Bas léger</option>
+                    <option value="">Bas Sauté</option>
+                    <option value="">Bas relevé</option>
+                    <option value="">Bas regulier</option>
+                  </select>
+                </div>
+                <div class="form-holder">
+                  <select  id="" class="form-control" name="teint">
+                    <option disabled value="">Détails à la main</option>
+                    <option value="">Fil bouton</option>
+                    <option value="">Piquage</option>
+                    <option value="">Boutons décorés</option>
+                    <option value="">Broderie à la main</option>
+                    <option value="">Sarwel(Tiaya)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <select  id="" class="form-control" name="sexe">
+                    <option disabled value="">Manches</option>
+                    <option value="">Manche Veste</option>
+                    <option value="">Manche courte</option>
+                    <option value="">Manche 3/4</option>
+                    <option value="">Manchette</option>
+                  </select>
+                </div>
+              </div>
+              <div class="cart_totals">
+
+              </div>
+
+            </section>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ##### Shop Grid Area End ##### -->

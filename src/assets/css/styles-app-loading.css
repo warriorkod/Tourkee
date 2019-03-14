@@ -1,0 +1,5 @@
+.app-loading .logo {
+    width: 100px;
+    height: 100px;
+    background: url(../img/core-img/search.svg) center center no-repeat;
+}
